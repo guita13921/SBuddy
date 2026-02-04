@@ -1,6 +1,8 @@
 import fetch from "node-fetch";
 
-const SUBID = 14222752;
+import { astrometryConfig } from "./config.js";
+
+const SUBID = Number(astrometryConfig.submissionId || 14222752);
 
 async function checkSubmission() {
     const response = await fetch(
