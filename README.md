@@ -55,6 +55,25 @@ Backend REST API
    |
 Database + Object Storage
 
+REPOSITORY STRUCTURE
+--------------------
+This repository is organized as a modular monorepo to keep the foundation clean
+as additional services are added.
+
+```
+apps/                  # Future application surfaces (web/mobile API gateway)
+services/
+  astrometry/          # Current astrometry integration scripts
+packages/              # Shared libraries (types, helpers, UI, etc.)
+docs/                  # Project documentation and specs
+```
+
+Astrometry helper scripts can be run directly from the root, for example:
+```
+npm run astrometry:login
+npm run astrometry:upload
+```
+
 SUGGESTED TECH STACK
 -------------------
 Frontend:
