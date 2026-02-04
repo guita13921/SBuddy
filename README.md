@@ -52,7 +52,7 @@ Backend REST API
 ------------------------------------------------
 | Auth | Calendar | AI Agent | Astrometry | Media |
 ------------------------------------------------
-    |
+   |
 Database + Object Storage
 
 SUGGESTED TECH STACK
