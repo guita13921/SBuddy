@@ -1,7 +1,9 @@
 import fetch from "node-fetch";
 import { URLSearchParams } from "url";
 
-const API_KEY = "kbrunnpyfngxhggi";
+import { requireAstrometryApiKey } from "./config.js";
+
+const API_KEY = requireAstrometryApiKey();
 
 async function login() {
     // Match Python: data={'request-json': json.dumps({...})}

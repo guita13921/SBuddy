@@ -1,8 +1,10 @@
 import fetch from "node-fetch";
 import fs from "fs";
 
-const JOBID = 15056968;
-const OUTPUT_FILE = "Barnard33_wcs.fits";
+import { astrometryConfig } from "./config.js";
+
+const JOBID = Number(astrometryConfig.jobId || 15056968);
+const OUTPUT_FILE = astrometryConfig.outputFile || "Barnard33_wcs.fits";
 
 async function downloadWCS() {
     const response = await fetch(

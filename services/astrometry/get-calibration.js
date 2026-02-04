@@ -1,6 +1,8 @@
 import fetch from "node-fetch";
 
-const JOBID = 15056968;
+import { astrometryConfig } from "./config.js";
+
+const JOBID = Number(astrometryConfig.jobId || 15056968);
 
 async function getCalibration() {
     const response = await fetch(

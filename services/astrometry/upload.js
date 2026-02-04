@@ -2,8 +2,14 @@ import fetch from "node-fetch";
 import FormData from "form-data";
 import fs from "fs";
 
-const SESSION = "a8vde7018phs7xgzajrmc5x12zjid1aq";
-const FILE_PATH = "./Barnard33.fit";
+import { astrometryConfig } from "./config.js";
+
+const SESSION = astrometryConfig.session;
+const FILE_PATH = astrometryConfig.filePath || "./Barnard33.fit";
+
+if (!SESSION) {
+    throw new Error("Missing ASTROMETRY_SESSION for upload.");
+}
 
 async function uploadFile() {
     const form = new FormData();
