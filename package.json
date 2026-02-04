@@ -2,8 +2,12 @@
   "name": "astrometry-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "services/astrometry/upload.js",
   "scripts": {
+    "astrometry:login": "node services/astrometry/login.js",
+    "astrometry:upload": "node services/astrometry/upload.js",
+    "astrometry:job-info": "node services/astrometry/job-info.js",
+    "astrometry:check-job": "node services/astrometry/check-job.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
