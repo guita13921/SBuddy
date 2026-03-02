@@ -68,6 +68,9 @@ packages/              # Shared libraries (types, helpers, UI, etc.)
 docs/                  # Project documentation and specs
 ```
 
+
+API docs: see `docs/api.md` for the current documented endpoints.
+
 Astrometry helper scripts can be run directly from the root, for example:
 ```
 npm run astrometry:login
